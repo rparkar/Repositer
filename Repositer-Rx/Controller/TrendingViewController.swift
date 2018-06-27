@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TrendingViewController.swift
 //  Repositer-Rx
 //
 //  Created by Rehan Parkar on 2018-06-26.
@@ -8,16 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TrendingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
