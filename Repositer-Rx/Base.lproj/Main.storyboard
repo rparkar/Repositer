@@ -197,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a search query!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9tT-lu-gll" customClass="RoundedBorderTextField" customModule="Repositer_Rx" customModuleProvider="target">
-                                <rect key="frame" x="20" y="85" width="335" height="30"/>
+                                <rect key="frame" x="20" y="75" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8dU-LX-hjO"/>
                                 </constraints>
@@ -218,7 +218,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LOm-Gm-doe" firstAttribute="leading" secondItem="HeT-Id-XnF" secondAttribute="leading" constant="20" id="Lsg-vQ-gxm"/>
-                            <constraint firstItem="9tT-lu-gll" firstAttribute="top" secondItem="LOm-Gm-doe" secondAttribute="bottom" constant="20" id="TrL-jo-CjI"/>
+                            <constraint firstItem="9tT-lu-gll" firstAttribute="top" secondItem="LOm-Gm-doe" secondAttribute="bottom" constant="10" id="TrL-jo-CjI"/>
                             <constraint firstItem="HeT-Id-XnF" firstAttribute="trailing" secondItem="LOm-Gm-doe" secondAttribute="trailing" constant="20" id="Y9S-jO-NdH"/>
                             <constraint firstItem="HeT-Id-XnF" firstAttribute="trailing" secondItem="9tT-lu-gll" secondAttribute="trailing" constant="20" id="hZU-4j-ZQI"/>
                             <constraint firstItem="9tT-lu-gll" firstAttribute="leading" secondItem="HeT-Id-XnF" secondAttribute="leading" constant="20" id="hsO-NP-bkI"/>
