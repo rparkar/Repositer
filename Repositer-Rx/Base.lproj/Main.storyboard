@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="65" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="400" id="lcn-cN-2gg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trendingRepoCell" rowHeight="400" id="lcn-cN-2gg" customClass="TrendingRepoCell" customModule="Repositer_Rx" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lcn-cN-2gg" id="Nar-ta-yIZ">
@@ -152,6 +152,16 @@
                                                 <constraint firstAttribute="trailing" secondItem="YpL-Sn-3hb" secondAttribute="trailing" constant="10" id="nfh-jw-hwE"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backView" destination="YpL-Sn-3hb" id="t7x-EX-3V4"/>
+                                            <outlet property="languageLabel" destination="DAj-9f-lxs" id="GNm-zJ-DqE"/>
+                                            <outlet property="noOfContributersLabel" destination="E0k-nG-g9w" id="sZa-By-J5j"/>
+                                            <outlet property="numberOfForksLabel" destination="G4f-wh-3AI" id="i5C-NO-lix"/>
+                                            <outlet property="repoDescriptionLabel" destination="Giw-SW-LMl" id="XmM-qq-vy8"/>
+                                            <outlet property="repoImageView" destination="kXV-RP-ol7" id="ger-GX-9rR"/>
+                                            <outlet property="repoNameLabel" destination="mhK-m1-Pk7" id="TJl-k2-uig"/>
+                                            <outlet property="viewReadmeButton" destination="bNm-EN-c8x" id="bOZ-GE-Wvz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
