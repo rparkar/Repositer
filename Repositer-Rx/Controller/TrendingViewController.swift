@@ -21,6 +21,10 @@ class TrendingViewController: UIViewController {
         tableView.delegate = self 
         tableView.reloadData()
         
+        DownloadService.instnace.downloadTrendingRepoDictionary { (json) in
+            print("done")
+        }
+        
     }
 
 
@@ -36,7 +40,7 @@ extension TrendingViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,4 +52,5 @@ extension TrendingViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configureCell(repo: repo)
         return cell
     }
+    
 }
