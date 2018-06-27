@@ -14,6 +14,8 @@
 		6CDB012D20E319AC005CAAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CDB012C20E319AC005CAAD3 /* Assets.xcassets */; };
 		6CDB013020E319AC005CAAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDB012E20E319AC005CAAD3 /* LaunchScreen.storyboard */; };
 		6CDB013B20E31EBC005CAAD3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB013A20E31EBC005CAAD3 /* SearchViewController.swift */; };
+		6CDB013D20E329A4005CAAD3 /* BorderedRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB013C20E329A4005CAAD3 /* BorderedRoundedButton.swift */; };
+		6CDB013F20E32A57005CAAD3 /* RoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB013E20E32A57005CAAD3 /* RoundedBorderTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		6CDB012F20E319AC005CAAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CDB013120E319AC005CAAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CDB013A20E31EBC005CAAD3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6CDB013C20E329A4005CAAD3 /* BorderedRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedRoundedButton.swift; sourceTree = "<group>"; };
+		6CDB013E20E32A57005CAAD3 /* RoundedBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderTextField.swift; sourceTree = "<group>"; };
 		B7F00C2E58A18BACC672E21E /* Pods_Repositer_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repositer_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6B7412DECABC6342383F92 /* Pods-Repositer-Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repositer-Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-Repositer-Rx/Pods-Repositer-Rx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +99,8 @@
 		6CDB013820E31A06005CAAD3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6CDB013C20E329A4005CAAD3 /* BorderedRoundedButton.swift */,
+				6CDB013E20E32A57005CAAD3 /* RoundedBorderTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -234,7 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CDB013B20E31EBC005CAAD3 /* SearchViewController.swift in Sources */,
+				6CDB013F20E32A57005CAAD3 /* RoundedBorderTextField.swift in Sources */,
 				6CDB012820E319AA005CAAD3 /* TrendingViewController.swift in Sources */,
+				6CDB013D20E329A4005CAAD3 /* BorderedRoundedButton.swift in Sources */,
 				6CDB012620E319AA005CAAD3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -126,7 +126,7 @@
                                                                         <constraint firstAttribute="height" constant="24" id="bab-W2-KE5"/>
                                                                     </constraints>
                                                                 </stackView>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNm-EN-c8x">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNm-EN-c8x" customClass="BorderedRoundedButton" customModule="Repositer_Rx" customModuleProvider="target">
                                                                     <rect key="frame" x="101.5" y="321.5" width="132" height="38"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                                                     <state key="normal" title="VIEW README">
@@ -195,7 +195,35 @@
                     <view key="view" contentMode="scaleToFill" id="l52-HY-Hzs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.94275027509999998" green="0.68063069779999996" blue="0.4012731055" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a search query!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9tT-lu-gll" customClass="RoundedBorderTextField" customModule="Repositer_Rx" customModuleProvider="target">
+                                <rect key="frame" x="20" y="85" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8dU-LX-hjO"/>
+                                </constraints>
+                                <color key="textColor" red="0.2784313725" green="0.46274509800000002" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REPOSITER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOm-Gm-doe">
+                                <rect key="frame" x="20" y="30" width="335" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Ug9-fD-UJd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="23"/>
+                                <color key="textColor" red="0.2784313725" green="0.46274509800000002" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LOm-Gm-doe" firstAttribute="leading" secondItem="HeT-Id-XnF" secondAttribute="leading" constant="20" id="Lsg-vQ-gxm"/>
+                            <constraint firstItem="9tT-lu-gll" firstAttribute="top" secondItem="LOm-Gm-doe" secondAttribute="bottom" constant="20" id="TrL-jo-CjI"/>
+                            <constraint firstItem="HeT-Id-XnF" firstAttribute="trailing" secondItem="LOm-Gm-doe" secondAttribute="trailing" constant="20" id="Y9S-jO-NdH"/>
+                            <constraint firstItem="HeT-Id-XnF" firstAttribute="trailing" secondItem="9tT-lu-gll" secondAttribute="trailing" constant="20" id="hZU-4j-ZQI"/>
+                            <constraint firstItem="9tT-lu-gll" firstAttribute="leading" secondItem="HeT-Id-XnF" secondAttribute="leading" constant="20" id="hsO-NP-bkI"/>
+                            <constraint firstItem="LOm-Gm-doe" firstAttribute="top" secondItem="HeT-Id-XnF" secondAttribute="top" constant="10" id="o0y-Cj-02d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HeT-Id-XnF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="SEARCH" image="searchIconSmall" selectedImage="searchIconSmall" id="JUH-nm-MCB">
