@@ -9,6 +9,11 @@
 import UIKit
 
 class TrendingViewController: UIViewController {
+    
+    //outlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
