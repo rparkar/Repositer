@@ -21,8 +21,10 @@ class TrendingViewController: UIViewController {
         tableView.delegate = self 
         tableView.reloadData()
         
-        DownloadService.instnace.downloadTrendingRepoDictionary { (json) in
-            print("done")
+        DownloadService.instnace.downloadTrendingRepos { (repoArray) in
+            
+            print(repoArray[0].name)
+            print(repoArray[1].name)
         }
         
     }
