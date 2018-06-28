@@ -235,14 +235,32 @@
                                 <color key="textColor" red="0.2784313725" green="0.46274509800000002" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oFN-jI-CTu">
+                                <rect key="frame" x="0.0" y="115" width="375" height="503"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="5cj-0v-K9M">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5cj-0v-K9M" id="Gnk-kO-zJU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oFN-jI-CTu" firstAttribute="leading" secondItem="HeT-Id-XnF" secondAttribute="leading" id="2kg-OM-3pT"/>
+                            <constraint firstItem="HeT-Id-XnF" firstAttribute="trailing" secondItem="oFN-jI-CTu" secondAttribute="trailing" id="AXM-0O-QeY"/>
                             <constraint firstItem="LOm-Gm-doe" firstAttribute="leading" secondItem="HeT-Id-XnF" secondAttribute="leading" constant="20" id="Lsg-vQ-gxm"/>
                             <constraint firstItem="9tT-lu-gll" firstAttribute="top" secondItem="LOm-Gm-doe" secondAttribute="bottom" constant="10" id="TrL-jo-CjI"/>
                             <constraint firstItem="HeT-Id-XnF" firstAttribute="trailing" secondItem="LOm-Gm-doe" secondAttribute="trailing" constant="20" id="Y9S-jO-NdH"/>
+                            <constraint firstItem="oFN-jI-CTu" firstAttribute="top" secondItem="9tT-lu-gll" secondAttribute="bottom" constant="10" id="enn-KI-x8T"/>
                             <constraint firstItem="HeT-Id-XnF" firstAttribute="trailing" secondItem="9tT-lu-gll" secondAttribute="trailing" constant="20" id="hZU-4j-ZQI"/>
                             <constraint firstItem="9tT-lu-gll" firstAttribute="leading" secondItem="HeT-Id-XnF" secondAttribute="leading" constant="20" id="hsO-NP-bkI"/>
+                            <constraint firstItem="HeT-Id-XnF" firstAttribute="bottom" secondItem="oFN-jI-CTu" secondAttribute="bottom" id="m3q-5s-6gR"/>
                             <constraint firstItem="LOm-Gm-doe" firstAttribute="top" secondItem="HeT-Id-XnF" secondAttribute="top" constant="10" id="o0y-Cj-02d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HeT-Id-XnF"/>
@@ -250,6 +268,10 @@
                     <tabBarItem key="tabBarItem" title="SEARCH" image="searchIconSmall" selectedImage="searchIconSmall" id="JUH-nm-MCB">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-6"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="searchTextField" destination="9tT-lu-gll" id="jFa-zJ-iVE"/>
+                        <outlet property="tableView" destination="oFN-jI-CTu" id="uDf-ZS-AXl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psh-PM-wIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,6 +283,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LjL-63-4gb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pDa-SK-SHf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
