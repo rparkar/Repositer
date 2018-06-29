@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate {
 
     //outlets
     @IBOutlet weak var searchTextField: RoundedBorderTextField!
@@ -22,6 +22,8 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindElements()
+        
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
 
     }
     
@@ -72,6 +74,21 @@ class SearchViewController: UIViewController {
         }.disposed(by: disposeBag)
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? SearchCell else {return}
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
+    
+    
 
 }
 

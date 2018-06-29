@@ -20,7 +20,7 @@ class SearchCell: UITableViewCell {
     @IBOutlet weak var searchImage: UIImageView!
     
     //variables
-    private var repoUrl: String?
+    public private (set) var repoUrl: String?
     
     func configureCell(repo: Repo) {
         repoNameLabel.text = repo.name
