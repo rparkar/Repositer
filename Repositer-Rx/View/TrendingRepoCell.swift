@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class TrendingRepoCell: UITableViewCell {
     
@@ -22,10 +24,11 @@ class TrendingRepoCell: UITableViewCell {
     
     //varibales
     private var repoUrl: String?
-    
+    var disposeBag = DisposeBag()
 
     func configureCell(repo: Repo) {
         
+
         repoNameLabel.text = repo.name
         repoDescriptionLabel.text = repo.descripton
         repoImageView.image = repo.image
@@ -34,6 +37,10 @@ class TrendingRepoCell: UITableViewCell {
         noOfContributersLabel.text = String(describing: repo.numberOfContributers)
         
         repoUrl = repo.repoUrl
+        
+        viewReadmeButton.rx.tap.subscribe(onNext: {
+            self.window?.rootViewController?.presentSFSafariVCFor(url: self.repoUrl!)
+        }).disposed(by: disposeBag)
         
     }
     
