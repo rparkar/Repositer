@@ -22,7 +22,7 @@ class DownloadService {
         
         Alamofire.request(trendingRepoURL).responseJSON { (response) in
             
-            guard let json = response.result.value as? Dictionary<String, Any> else {return}
+            guard let json = response.result.value as? Dictionary<String, AnyObject> else {return}
           
             guard let repoDictArray = json["items"] as? [Dictionary<String, Any>] else {return}
             
@@ -36,10 +36,10 @@ class DownloadService {
                         let language = repoDict["language"] as? String,
                         let repoUrl = repoDict["html_url"] as? String,
                         let contributorsUrl = repoDict["contributors_url"] as? String,
-                        let ownerDict = repoDict["owner"] as? Dictionary<String, Any>,
+                        let ownerDict = repoDict["owner"] as? Dictionary<String, AnyObject>,
                         let avatarUrl = ownerDict["avatar_url"] as? String else { break }
                     
-                    let repoDictionary: Dictionary<String, Any> = ["name": name, "description": description, "forks_count":numberOfForks, "language": language, "html_url":repoUrl, "contributors_url": contributorsUrl, "avatar_url":avatarUrl]
+                    let repoDictionary: Dictionary<String, Any> = ["name": name, "description": description, "forks_count":numberOfForks, "language": language, "repoUrl":repoUrl, "contributors_url": contributorsUrl, "avatar_url":avatarUrl]
 
                     trendingReposArray.append(repoDictionary)
                     
@@ -55,6 +55,7 @@ class DownloadService {
     func downloadTrendingRepos(completion: @escaping (_ reposArray: [Repo]) -> ()) {
         
         var reposArray = [Repo]()
+        
         downloadTrendingRepoDictionary { (trendingReposDictArray) in
             
             for dict in trendingReposDictArray {
@@ -91,7 +92,7 @@ class DownloadService {
         let numberOfForks = dict["forks_count"] as! Int
         let language = dict["language"] as! String
         //let numberOfContributers = dict[""] as! Int
-        let repoUrl = dict["html_url"] as! String
+        let repoUrl = dict["repoUrl"] as! String
         
         downloadImageFor(avatarUrl: avatarUrl) { (image) in
             self.downloadContributorsDataFor(contributorsUrl: contributorsUrl, completion: { (returnedContributions) in
@@ -112,11 +113,11 @@ class DownloadService {
         }
     }
     
-    func downloadContributorsDataFor(contributorsUrl: String, completion: @escaping (_ contributors: Int) -> () ) {
+    func downloadContributorsDataFor(contributorsUrl: String, completion: @escaping (_ contributors: Int) -> (Void) ) {
         
         Alamofire.request(contributorsUrl).responseJSON { (response) in
             
-            guard let json = response.result.value as? Dictionary<String, Any> else { return }
+            guard let json = response.result.value as? [Dictionary<String, Any>] else { return }
             if !json.isEmpty {
                 let contributions = json.count
                 completion(contributions)
